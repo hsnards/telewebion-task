@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from 'react';
 
 export function useScrollDirection() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -30,9 +30,9 @@ export function useScrollDirection() {
       }
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, [lastScrollY]);
 
   return { isScrollingDown, lastScrollY };
