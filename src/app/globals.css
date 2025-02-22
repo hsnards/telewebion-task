@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@theme {
+  --spacing: 8px;
+
+  /* Colors */
+  --color-background: #000000;
+  --color-foreground: #10151a;
+  --color-primary: #fd4141;
+  --color-neutral-900: #10151a;
+  --color-neutral-400: #7b8794;
+  --color-neutral-200: #cbd2d9;
+
+  /* Typography */
+  --text-caption: 12.64px;
+  --text-caption--line-height: 20px;
+  --text-caption--font-weight: 500;
+
+  --text-footnote: 11.24px;
+  --text-footnote--line-height: 16px;
+  --text-footnote--font-weight: 500;
+
+  --text-body-small: 14px;
+  --text-body-small--line-height: 20px;
+  --text-body-small--font-weight: 500;
+
+  --text-body: 16px;
+  --text-body--line-height: 24px;
+  --text-body--font-weight: 500;
+
+  --text-title: 20px;
+  --text-title--line-height: 28px;
+  --text-title--font-weight: 700;
+
+  --text-subtitle: 18px;
+  --text-subtitle--line-height: 24px;
+  --text-subtitle--font-weight: 500;
+
+  --animate-blink: 0.3s linear blink;
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  font-family: var(--font-vazir), Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 50%, 0.3);
+  opacity: 0.3;
+  border-radius: 10px;
+}
