@@ -15,7 +15,7 @@ export const tabsStyles = tv({
     root: 'flex flex-col w-full',
     list: 'flex gap-2 border-b border-neutral-900 overflow-x-auto',
     trigger: [
-      'px-4 py-1 text-subtitle transition-all relative cursor-pointer',
+      'px-4 py-1 text-subtitle  relative cursor-pointer whitespace-nowrap',
       'text-gray-400 hover:text-gray-200',
       'focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500',
       'data-[state=active]:text-white data-[state=active]:border-b-1 data-[state=active]:border-primary',

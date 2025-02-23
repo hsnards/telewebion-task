@@ -4,9 +4,9 @@
   --spacing: 8px;
 
   /* Colors */
+  --color-primary: #fd4141;
   --color-background: #000000;
   --color-foreground: #10151a;
-  --color-primary: #fd4141;
   --color-neutral-900: #10151a;
   --color-neutral-400: #7b8794;
   --color-neutral-200: #cbd2d9;
@@ -64,4 +64,8 @@ body {
   background: hsla(0, 0%, 50%, 0.3);
   opacity: 0.3;
   border-radius: 10px;
+}
+
+svg {
+  display: inline-block;
 }
