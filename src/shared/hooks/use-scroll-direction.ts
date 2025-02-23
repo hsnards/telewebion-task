@@ -7,27 +7,16 @@ export function useScrollDirection() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
 
   useEffect(() => {
-    const THRESHOLD = 2; // Minimum scroll distance to trigger direction change
-    let ticking = false;
-
     const updateScrollDirection = () => {
       const scrollY = window.scrollY;
 
-      if (Math.abs(scrollY - lastScrollY) < THRESHOLD) {
-        ticking = false;
-        return;
-      }
 
       setIsScrollingDown(scrollY > lastScrollY);
       setLastScrollY(scrollY);
-      ticking = false;
     };
 
     const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDirection);
-        ticking = true;
-      }
+      window.requestAnimationFrame(updateScrollDirection);
     };
 
     window.addEventListener('scroll', onScroll);
