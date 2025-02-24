@@ -10,7 +10,6 @@ export function useScrollDirection() {
     const updateScrollDirection = () => {
       const scrollY = window.scrollY;
 
-
       setIsScrollingDown(scrollY > lastScrollY);
       setLastScrollY(scrollY);
     };

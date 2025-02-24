@@ -45,7 +45,7 @@ export function Header() {
           <SearchIcon />
         </Button>
 
-        <Button variant="text" className='text-caption'>
+        <Button variant="text" className="text-caption">
           <a>ورود / ثبت نام</a>
         </Button>
       </div>

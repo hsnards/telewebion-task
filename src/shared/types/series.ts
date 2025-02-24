@@ -45,4 +45,23 @@ export interface PaginatedResponse<T> {
     itemsPerPage: number;
     hasMore: boolean;
   };
-} 
+}
+
+export interface SeriesDetails {
+  bannerImage: string;
+  logoImage: string;
+  title: string;
+  originalTitle: string;
+  rating: {
+    userRating: number;
+    imdb: number;
+  };
+  duration: number;
+  country: string;
+  totalSeasons: number;
+  totalEpisodes: number;
+  language: string;
+  ageRating: string;
+  genres: string[];
+  description: string;
+}

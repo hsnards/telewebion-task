@@ -1,16 +1,10 @@
 import { PlayIcon, ThumbUpIcon } from '@/shared/components/icons';
+import { Episode } from '@/shared/types/series';
 import { formatDuration } from '@/shared/utils/formatDuration';
 import Image from 'next/image';
 import { tv } from 'tailwind-variants';
 
-interface EpisodeCardProps {
-  title: string;
-  episodeName: string;
-  imageUrl: string;
-  duration: number;
-  rate: number;
-  season: number;
-  episode: number;
+interface Props extends Episode {
   className?: string;
 }
 
@@ -23,7 +17,7 @@ export function EpisodeCard({
   season,
   episode,
   className,
-}: EpisodeCardProps) {
+}: Props) {
   const styles = episodeCard();
 
   return (

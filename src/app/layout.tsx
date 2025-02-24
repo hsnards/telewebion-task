@@ -1,7 +1,7 @@
-import { Vazirmatn } from 'next/font/google';
-import type { Metadata } from 'next';
-import { Providers } from './providers';
 import { Header } from '@/core/layout/Header';
+import { Providers } from '@/core/providers';
+import type { Metadata } from 'next';
+import { Vazirmatn } from 'next/font/google';
 import './globals.css';
 
 const vazir = Vazirmatn({

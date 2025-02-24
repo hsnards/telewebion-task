@@ -18,10 +18,10 @@ export function useSeriesDetails() {
 
 export function useSeasonEpisodes(seasonNumber: number) {
   return useInfiniteQuery({
+    initialPageParam: 1,
     queryKey: seriesKeys.episodes(seasonNumber),
     queryFn: ({ pageParam = 1 }) => seriesApi.getSeasonEpisodes(seasonNumber, pageParam),
-    initialPageParam: 1,
     getNextPageParam: (lastPage) =>
       lastPage.metadata.hasMore ? lastPage.metadata.currentPage + 1 : undefined,
   });
-} 
+}
